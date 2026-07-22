@@ -1,0 +1,32 @@
+name: Intégration continue
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Tests unitaires
+        run: npm test
+      - name: Scripts SQL sur une base vide
+        # Une seule base, dans l'ordre : le schéma (0NN), les données d'exemple, puis les migrations (1NN).
+        run: |
+          for f in db/0*.sql db/seed.sql db/1*.sql; do
+            if [ -f "$f" ]; then cat "$f"; fi
+          done | sqlite3 -bail :memory:
+
+  deploiement-recette:
+    needs: tests
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publication sur la recette
+        run: echo "Publication de ${GITHUB_SHA} sur la recette"
