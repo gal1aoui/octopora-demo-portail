@@ -1,0 +1,26 @@
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.swatches li {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.swatches span {
+  display: block;
+  width: 120px;
+  height: 56px;
+  border-radius: var(--radius);
+}
+
+.specimen-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
