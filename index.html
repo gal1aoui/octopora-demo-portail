@@ -16,6 +16,25 @@
   <main>
     <h1>Mes contrats</h1>
     <p class="muted">Retrouvez vos contrats, vos garanties et vos attestations.</p>
+    <form class="filters" id="filtres">
+      <label>Type
+        <select name="type">
+          <option value="">Tous</option>
+          <option value="auto">Auto</option>
+          <option value="habitation">Habitation</option>
+          <option value="sante">Santé</option>
+        </select>
+      </label>
+      <label>Statut
+        <select name="statut">
+          <option value="">Tous</option>
+          <option value="actif">Actif</option>
+          <option value="resilie">Résilié</option>
+        </select>
+      </label>
+    </form>
+    <ul class="contract-list" id="contrats"></ul>
   </main>
+  <script type="module" src="js/contracts.js"></script>
 </body>
 </html>
