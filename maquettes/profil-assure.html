@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquette : profil de l'assuré</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/maquettes/profil-assure.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Mon espace assuré</strong>
+    <nav>
+      <a href="../index.html">Mes contrats</a>
+      <a href="../sinistre.html">Déclarer un sinistre</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Mon profil</h1>
+    <form class="card profile-form">
+      <h2>Coordonnées</h2>
+      <label>Nom <input value="Ben Salah" readonly></label>
+      <label>Prénom <input value="Karim" readonly></label>
+      <label>Adresse e-mail <input type="email" value="karim.bensalah@example.com"></label>
+      <label>Téléphone <input type="tel" value="+216 00 000 101"></label>
+      <label>Adresse postale <textarea rows="2">12 rue des Jasmins, La Marsa</textarea></label>
+      <p class="muted">Le nom et le prénom ne se modifient qu'en agence, sur présentation d'une pièce d'identité.</p>
+      <div class="actions"><button class="button" type="submit">Enregistrer</button><a class="button secondary" href="../index.html">Annuler</a></div>
+    </form>
+  </main>
+</body>
+</html>
