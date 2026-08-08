@@ -1,3 +1,4 @@
+import { formatDate } from "./dates.js";
 import { CONTRACTS } from "./sample-data.js";
 
 const TYPE_LABELS = { auto: "Auto", habitation: "Habitation", sante: "Santé" };
@@ -9,7 +10,7 @@ export function filterContracts(contracts, { type = "", statut = "" } = {}) {
 }
 
 export function contractRow(contract) {
-  const start = new Date(contract.debut).toLocaleDateString("en-US");
+  const start = formatDate(contract.debut);
   return `<li class="card contract">
     <span class="tag">${TYPE_LABELS[contract.type]}</span>
     <strong>${contract.libelle}</strong>
