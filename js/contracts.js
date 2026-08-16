@@ -1,3 +1,4 @@
+import { downloadCertificate } from "./certificates.js";
 import { formatDate } from "./dates.js";
 import { CONTRACTS } from "./sample-data.js";
 
@@ -15,6 +16,7 @@ export function contractRow(contract) {
     <span class="tag">${TYPE_LABELS[contract.type]}</span>
     <strong>${contract.libelle}</strong>
     <span class="muted">${contract.numero}, depuis le ${start}</span>
+    <button type="button" class="button secondary" data-attestation="${contract.id}">Attestation PDF</button>
   </li>`;
 }
 
@@ -30,5 +32,10 @@ if (typeof document !== "undefined") {
   const form = document.getElementById("filtres");
   const list = document.getElementById("contrats");
   form.addEventListener("change", () => render(form, list));
+  list.addEventListener("click", (event) => {
+    const id = Number(event.target.dataset?.attestation);
+    const contract = CONTRACTS.find((candidate) => candidate.id === id);
+    if (contract) downloadCertificate(contract);
+  });
   render(form, list);
 }
