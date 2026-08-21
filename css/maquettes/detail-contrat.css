@@ -1,0 +1,28 @@
+.garanties {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.garanties th,
+.garanties td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.garanties th {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .garanties thead {
+    display: none;
+  }
+
+  .garanties tr,
+  .garanties td {
+    display: block;
+  }
+}
