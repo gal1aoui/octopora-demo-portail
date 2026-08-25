@@ -1,0 +1,19 @@
+.avenants {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.avenants li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 4px 16px;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .avenants li {
+    grid-template-columns: 1fr;
+  }
+}
