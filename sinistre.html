@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Déclarer un sinistre</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Mon espace assuré</strong>
+    <nav>
+      <a href="index.html">Mes contrats</a>
+      <a href="sinistre.html" aria-current="page">Déclarer un sinistre</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Déclarer un sinistre</h1>
+    <form id="declaration" class="card" action="/api/sinistres" method="post" enctype="multipart/form-data">
+      <p class="progress muted"></p>
+
+      <fieldset>
+        <legend>Que s'est-il passé ?</legend>
+        <label>Date du sinistre <input type="date" name="date" required></label>
+        <label>Type
+          <select name="type" required>
+            <option value="">Choisir</option>
+            <option value="accident">Accident de la route</option>
+            <option value="degat-des-eaux">Dégât des eaux</option>
+            <option value="vol">Vol</option>
+          </select>
+        </label>
+        <label>Description <textarea name="description" rows="4" minlength="20" required></textarea></label>
+        <button type="button" class="button" data-next>Continuer</button>
+      </fieldset>
+
+      <fieldset hidden>
+        <legend>Photos et justificatifs</legend>
+        <input type="file" name="photos" accept="image/*,application/pdf" multiple>
+        <button type="button" class="button" data-next>Continuer</button>
+      </fieldset>
+
+      <fieldset hidden>
+        <legend>Confirmation</legend>
+        <label><input type="checkbox" name="certifie"> Je certifie l'exactitude de cette déclaration.</label>
+        <button type="submit" class="button">Envoyer la déclaration</button>
+      </fieldset>
+    </form>
+  </main>
+  <script type="module" src="js/claim-form.js"></script>
+</body>
+</html>
