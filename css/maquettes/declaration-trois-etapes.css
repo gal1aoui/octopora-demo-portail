@@ -1,0 +1,48 @@
+.steps {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  flex: 1;
+  padding: 8px 12px;
+  border-bottom: 3px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.steps li.done {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.steps li.current {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.step-form {
+  display: grid;
+  gap: 16px;
+}
+
+.step-form label {
+  display: grid;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .steps li {
+    font-size: 0.75rem;
+    padding: 6px 4px;
+  }
+}

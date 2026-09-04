@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquette : déclaration de sinistre en trois étapes</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/maquettes/declaration-trois-etapes.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Mon espace assuré</strong>
+    <nav>
+      <a href="../index.html">Mes contrats</a>
+      <a href="../sinistre.html">Déclarer un sinistre</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Déclarer un sinistre</h1>
+    <ol class="steps" aria-label="Progression">
+      <li class="done">1. Les faits</li>
+      <li class="current">2. Les dommages</li>
+      <li>3. Les pièces justificatives</li>
+    </ol>
+    <form class="card step-form">
+      <h2>Quels dommages constatez-vous ?</h2>
+      <label>Ce qui est endommagé <select><option>Mon véhicule</option><option>Le véhicule d'un tiers</option><option>Mon logement</option></select></label>
+      <label>Description des dommages <textarea rows="4" placeholder="Ex. : aile avant gauche enfoncée, phare cassé"></textarea></label>
+      <label><input type="checkbox"> Le véhicule peut encore rouler</label>
+      <div class="actions"><a class="button secondary" href="#">Retour</a><button class="button" type="button">Continuer</button></div>
+    </form>
+  </main>
+</body>
+</html>
