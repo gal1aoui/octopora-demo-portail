@@ -1,0 +1,40 @@
+.track {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.track li {
+  display: grid;
+  gap: 2px;
+  padding: 12px 0 12px 32px;
+  position: relative;
+  color: var(--color-muted);
+}
+
+.track li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.track li.done::before {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.track li.current {
+  color: var(--color-text);
+}
+
+.track li.current::before {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
