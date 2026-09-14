@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sinistres à traiter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Espace conseiller</strong>
+    <nav>
+      <a href="tableau-sinistres-conseiller.html" aria-current="page">Sinistres à traiter</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Sinistres à traiter</h1>
+    <p class="muted">Classés par priorité, puis du plus ancien au plus récent.</p>
+    <table class="card">
+      <thead><tr><th>Dossier</th><th>Assuré</th><th>Priorité</th><th>Ancienneté</th></tr></thead>
+      <tbody id="sinistres"></tbody>
+    </table>
+  </main>
+  <script type="module" src="js/advisor-claims.js"></script>
+</body>
+</html>
