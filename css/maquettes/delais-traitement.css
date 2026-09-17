@@ -1,0 +1,22 @@
+.delay {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.delays {
+  width: 100%;
+  max-width: 560px;
+  border-collapse: collapse;
+}
+
+.delays th,
+.delays td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.delays th {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
