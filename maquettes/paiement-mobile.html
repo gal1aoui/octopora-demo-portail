@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquette : Parcours de paiement sur téléphone</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/maquettes/paiement-mobile.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Mon espace assuré</strong>
+    <nav>
+      <a href="../index.html">Mes contrats</a>
+      <a href="../sinistre.html">Déclarer un sinistre</a>
+    </nav>
+  </header>
+  <main>
+
+    <div class="phone">
+      <p class="progress muted">Étape 2 sur 3 : paiement</p>
+      <h1>Régler 180,000 DT</h1>
+      <p class="muted">Cotisation du 15/04/2025, Peugeot 208.</p>
+      <form class="card pay-form">
+        <label>Numéro de carte
+          <input type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456">
+        </label>
+        <div class="row">
+          <label>Expiration
+            <input type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA">
+          </label>
+          <label>Cryptogramme
+            <input type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123">
+          </label>
+        </div>
+        <p class="muted small">Votre banque peut vous demander une confirmation sur votre téléphone.</p>
+      </form>
+      <div class="sticky-pay">
+        <button type="button" class="button">Payer 180,000 DT</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
