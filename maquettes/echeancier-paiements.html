@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquette : Échéancier des paiements</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/maquettes/echeancier-paiements.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Mon espace assuré</strong>
+    <nav>
+      <a href="../index.html">Mes contrats</a>
+      <a href="../sinistre.html">Déclarer un sinistre</a>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Mes paiements</h1>
+    <p class="muted">Vos prochaines échéances et l'historique de vos règlements.</p>
+    <section class="echeancier">
+      <h2>Prochaines échéances</h2>
+      <ul class="echeances">
+        <li class="card echeance">
+          <div><strong>15/04/2025</strong><span class="muted">Peugeot 208, AUTO-2024-0187</span></div>
+          <span class="montant">180,000 DT</span>
+          <span class="tag soon">Dans 7 jours</span>
+          <a class="button" href="#">Payer</a>
+        </li>
+        <li class="card echeance">
+          <div><strong>15/07/2025</strong><span class="muted">Appartement, HAB-2023-0921</span></div>
+          <span class="montant">96,500 DT</span>
+          <span class="tag">À venir</span>
+          <a class="button secondary" href="#">Programmer</a>
+        </li>
+      </ul>
+      <h2>Historique</h2>
+      <table class="historique">
+        <thead><tr><th>Date</th><th>Contrat</th><th>Montant</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr><td>15/01/2025</td><td>AUTO-2024-0187</td><td>180,000 DT</td><td><span class="tag ok">Payé</span></td></tr>
+          <tr><td>15/10/2024</td><td>AUTO-2024-0187</td><td>180,000 DT</td><td><span class="tag ok">Payé</span></td></tr>
+          <tr><td>15/07/2024</td><td>HAB-2023-0921</td><td>96,500 DT</td><td><span class="tag ko">Refusé, repayé le 18/07</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
