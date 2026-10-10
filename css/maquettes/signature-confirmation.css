@@ -1,0 +1,7 @@
+.resume, .sign-form, .confirmation { margin-bottom: 16px; }
+.sign-form { display: grid; gap: 16px; max-width: 480px; }
+.sign-form input[type="text"] { min-height: 44px; padding: 0 12px; font: inherit; border: 1px solid var(--color-border); border-radius: var(--radius); letter-spacing: 0.3em; }
+.sign-form label { display: grid; gap: 6px; font-weight: 600; }
+.consent { display: flex !important; align-items: center; gap: 10px; font-weight: 400 !important; }
+.confirmation { border-color: var(--color-success); }
+.tag.ok { background: #dcfce7; color: var(--color-success); }

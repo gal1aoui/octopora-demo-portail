@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquette : Signature et confirmation d'un avenant</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/maquettes/signature-confirmation.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Mon espace assuré</strong>
+    <nav>
+      <a href="../index.html">Mes contrats</a>
+      <a href="../sinistre.html">Déclarer un sinistre</a>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Signer l'avenant</h1>
+    <section class="card resume">
+      <h2>Changement d'adresse</h2>
+      <p class="muted">Contrat AUTO-2024-0187. Prend effet le 01/05/2025, sans changement de cotisation.</p>
+    </section>
+    <form class="card sign-form">
+      <label class="consent"><input type="checkbox"> J'ai lu l'avenant et je l'accepte.</label>
+      <label>Code reçu par SMS
+        <input type="text" inputmode="numeric" maxlength="6" placeholder="6 chiffres">
+      </label>
+      <button type="button" class="button">Signer l'avenant</button>
+    </form>
+    <section class="card confirmation" aria-live="polite">
+      <span class="tag ok">Signé</span>
+      <h2>Votre avenant est signé</h2>
+      <p>Signé le 15/04/2025 à 10:02. Vous retrouvez la copie dans votre coffre-fort de documents.</p>
+      <a class="button secondary" href="#">Voir mes documents</a>
+    </section>
+  </main>
+</body>
+</html>
