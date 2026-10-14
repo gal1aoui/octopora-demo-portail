@@ -1,0 +1,8 @@
+.viewer { display: grid; gap: 16px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+.toolbar .button:last-child { margin-left: auto; }
+.page { display: grid; place-content: center; gap: 8px; min-height: 360px; text-align: center; background: #e2e8f0; border-radius: var(--radius); }
+.page p { margin: 0; font-weight: 600; }
+.pager { display: flex; justify-content: space-between; }
+.pager .button[disabled] { opacity: 0.5; cursor: not-allowed; }
+@media (max-width: 640px) { .toolbar .button:last-child { margin-left: 0; width: 100%; justify-content: center; } }
