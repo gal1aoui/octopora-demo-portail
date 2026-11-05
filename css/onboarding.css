@@ -1,0 +1,28 @@
+.onboarding {
+  max-width: 480px;
+  margin: 64px auto;
+  text-align: center;
+}
+
+.onboarding-step h1,
+.onboarding-step h2 {
+  margin-top: 8px;
+}
+
+.onboarding-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.onboarding-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.onboarding-dots span.active {
+  background: var(--color-primary);
+}
