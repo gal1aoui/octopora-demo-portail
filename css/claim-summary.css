@@ -1,0 +1,17 @@
+/* Résumé de la déclaration de sinistre : visible sur tous les écrans. */
+.claim-summary {
+  display: block;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .claim-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+
+  .claim-summary {
+    margin-top: 0;
+  }
+}
