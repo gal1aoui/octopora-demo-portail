@@ -12,6 +12,34 @@ export function canContinue(step, values) {
   return values.certifie === "on";
 }
 
+// La saisie reste sur l'appareil : une coupure de réseau ne fait rien perdre.
+const DRAFT_KEY = "declaration-sinistre:brouillon";
+
+export function saveDraft(storage, values) {
+  storage.setItem(DRAFT_KEY, JSON.stringify(values));
+}
+
+export function restoreDraft(storage) {
+  try {
+    return JSON.parse(storage.getItem(DRAFT_KEY)) ?? {};
+  } catch {
+    return {};
+  }
+}
+
+export function clearDraft(storage) {
+  storage.removeItem(DRAFT_KEY);
+}
+
+function fillForm(form, values) {
+  for (const [name, value] of Object.entries(values)) {
+    const field = form.elements.namedItem(name);
+    if (field && field.type !== "file" && field.type !== "checkbox") {
+      field.value = value;
+    }
+  }
+}
+
 function showStep(form, index) {
   form.querySelectorAll("fieldset").forEach((fieldset, i) => {
     fieldset.hidden = i !== index;
@@ -22,7 +50,14 @@ function showStep(form, index) {
 if (typeof document !== "undefined") {
   const form = document.getElementById("declaration");
   let current = 0;
+  fillForm(form, restoreDraft(localStorage));
   showStep(form, current);
+
+  form.addEventListener("input", () => {
+    const { photos, ...values } = Object.fromEntries(new FormData(form));
+    saveDraft(localStorage, values);
+  });
+  form.addEventListener("submit", () => clearDraft(localStorage));
 
   form.addEventListener("click", (event) => {
     if (!event.target.matches("[data-next]")) {
