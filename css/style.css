@@ -2,7 +2,7 @@
   --color-primary: #2563eb;
   --color-primary-dark: #1d4ed8;
   --color-text: #0f172a;
-  --color-muted: #64748b;
+  --color-muted: #475569;
   --color-border: #e2e8f0;
   --color-surface: #ffffff;
   --color-background: #f8fafc;
@@ -79,7 +79,7 @@ main {
 .button.secondary {
   background: transparent;
   color: var(--color-primary);
-  border: 1px solid var(--color-border);
+  border: 1px solid #94a3b8;
 }
 
 .tag {
@@ -93,4 +93,24 @@ main {
 
 .muted {
   color: var(--color-muted);
+}
+
+/* PORTAIL-69 : le focus clavier reste visible partout. */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  padding: 8px 12px;
+  background: var(--color-text);
+  color: #fff;
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 16px;
 }
