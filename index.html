@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="app-header">
     <strong>Mon espace assuré</strong>
     <nav>
@@ -14,12 +15,12 @@
       <a href="sinistre.html">Déclarer un sinistre</a>
     </nav>
   </header>
-  <main>
+  <main id="contenu" tabindex="-1">
     <h1>Mes contrats</h1>
     <p class="muted">Retrouvez vos contrats, vos garanties et vos attestations.</p>
     <form class="filters" id="filtres">
       <label>Type
-        <select name="type">
+        <select name="type" aria-controls="contrats">
           <option value="">Tous</option>
           <option value="auto">Auto</option>
           <option value="habitation">Habitation</option>
@@ -27,14 +28,14 @@
         </select>
       </label>
       <label>Statut
-        <select name="statut">
+        <select name="statut" aria-controls="contrats">
           <option value="">Tous</option>
           <option value="actif">Actif</option>
           <option value="resilie">Résilié</option>
         </select>
       </label>
     </form>
-    <ul class="contract-list" id="contrats"></ul>
+    <ul class="contract-list" id="contrats" aria-live="polite"></ul>
   </main>
   <script type="module" src="js/contracts.js"></script>
 </body>
